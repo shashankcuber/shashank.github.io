@@ -1,0 +1,8 @@
+title: Shashank
+description: Projects, CV, and technical blogs
+theme: minima
+
+header_pages:
+  - index.md
+  - cv.md
+  - blogs.md
