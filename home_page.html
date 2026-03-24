@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shashank</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a30;
+      --text: #e8ecf3;
+      --muted: #a8b3c7;
+      --accent: #7aa2ff;
+      --border: #263252;
+      --maxw: 960px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: linear-gradient(180deg, #0b1020 0%, #0d1326 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: min(var(--maxw), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(11, 16, 32, 0.82);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .hero {
+      padding: 5rem 0 3rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.1rem, 5vw, 4rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .section {
+      padding: 2.5rem 0;
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .card {
+      background: rgba(18, 26, 48, 0.9);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .blog-list article {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .blog-list article:last-child {
+      border-bottom: none;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      background: rgba(122, 162, 255, 0.12);
+      color: #bfd1ff;
+      margin-bottom: 0.5rem;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1rem;
+      border-radius: 12px;
+      background: var(--accent);
+      color: #0b1020;
+      font-weight: 700;
+    }
+
+    footer {
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Shashank</div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#cv">CV</a>
+        <a href="#blogs">Blogs</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="home">
+      <h1>Hi, I'm Shashank.</h1>
+      <p>
+        I work on machine learning, biomedical AI, image registration, super-resolution,
+        and retrieval-augmented systems. This website is where I share my projects,
+        academic work, CV, and technical writing.
+      </p>
+      <a class="button" href="#blogs">Read Blogs</a>
+    </section>
+
+    <section class="section" id="cv">
+      <h2>CV</h2>
+      <div class="card">
+        <p>
+          You can add a short profile summary here, along with your research interests,
+          education, experience, publications, and technical skills.
+        </p>
+        <p>
+          <a href="cv.pdf" target="_blank" rel="noopener noreferrer">Download CV (PDF)</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="blogs">
+      <h2>Blogs</h2>
+      <div class="card blog-list">
+        <article>
+          <div class="tag">Deep Learning</div>
+          <h3><a href="#">Understanding Conformal Prediction for Regression</a></h3>
+          <p>A beginner-friendly write-up on uncertainty intervals, calibration, and practical implementation.</p>
+        </article>
+
+        <article>
+          <div class="tag">RAG</div>
+          <h3><a href="#">From Vanilla RAG to Graph RAG</a></h3>
+          <p>An overview of retrieval-augmented generation systems, their trade-offs, and when to use each one.</p>
+        </article>
+
+        <article>
+          <div class="tag">Medical Imaging</div>
+          <h3><a href="#">Image Registration Intuition and Practice</a></h3>
+          <p>A practical explanation of deformation fields, warping, and evaluation metrics in registration pipelines.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Shashank · Built with GitHub Pages
+    </div>
+  </footer>
+</body>
+</html>
